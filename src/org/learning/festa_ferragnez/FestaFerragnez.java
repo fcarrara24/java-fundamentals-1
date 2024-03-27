@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 
 public class FestaFerragnez {
+
     public static void main(String[] args) {
         String[] invitati = { "Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J Ax", "Francesco Totti", "Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic"};
         System.out.println("come ti chiami?");
