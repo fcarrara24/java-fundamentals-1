@@ -6,6 +6,14 @@ import java.util.Scanner;
 
 
 public class FestaFerragnez {
+    public static String toCamelCase(String str){
+        String[] arrString = str.split(" ");
+        for (int i = 0; i < arrString.length; i++) {
+            String word = arrString[i];
+            arrString[i] = word.substring(0,1).toUpperCase()+ word.substring(1).toLowerCase();
+        }
+        return String.join(" ", arrString);
+    }
 
     public static void main(String[] args) {
         String[] invitati = { "Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J Ax", "Francesco Totti", "Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic"};
@@ -15,11 +23,7 @@ public class FestaFerragnez {
         String nome = sc.nextLine();
 
         //metto il nome in camel case
-        String[] arrNome = nome.split(" ");
-        for (int i = 0; i < arrNome.length; i++) {
-            arrNome[i] = arrNome[i].substring(0,1).toUpperCase()+ arrNome[i].substring(1).toLowerCase();
-        }
-        nome = String.join(" ", arrNome);
+        nome = toCamelCase(nome);
 
         // trasformo in una lista
         boolean presente = Arrays.asList(invitati).contains(nome);
